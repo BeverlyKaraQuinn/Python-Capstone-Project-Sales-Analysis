@@ -32,7 +32,6 @@ Full version: [`Executive_Summary.txt`](Executive_Summary.txt) · One-page insig
 | File / folder | What it is |
 |---|---|
 | `Kara_Beverly_Python_Capstone.ipynb` | Jupyter notebook with all code: loading, cleaning, fact table, KPIs, charts, dashboard |
-| `DASP - B04 - Kara Quinn Beverly.pdf` | Final capstone report (8 sections) |
 | `Executive_Summary.txt` | Executive summary (11 bullet lines) |
 | `One_Page_Insights_Summary.md` | One-page summary of insights and recommendations |
 | `cleaning_log.csv` | All 23 cleaning fixes, with the rule used and rows affected |

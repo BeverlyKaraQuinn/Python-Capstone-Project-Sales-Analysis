@@ -1,0 +1,15 @@
+EXECUTIVE SUMMARY
+Python Programming Capstone : Sales Performance & Customer Insights
+Kara Quinn Beverly | Data Sense Analytics | November 2026
+
+- Analysed 25 months of online store sales (Jan 2024 - Jan 2026) after cleaning 7 raw CSV files.
+- Fixed 23 data-quality issues: duplicates, inconsistent labels, mixed date formats, peso prices stored as text, invalid values and orphan records.
+- Built one fact table of 36,892 order items joining orders, items, products and customers.
+- Total revenue (Completed + Shipped orders, net of discounts) was PHP 5.29M from 11,601 orders, an average order value of PHP 456.29.
+- Monthly revenue was flat at about PHP 185K-235K; 2025 revenue was about 2% lower than 2024.
+- Revenue is balanced across categories: Toys leads (13.9%) and Sports is lowest (10.8%).
+- Revenue is balanced across regions: Central Luzon leads (17.5%) while Metro Manila ranks only 3rd.
+- The top 10 products make up only 4.0% of revenue, so the store does not rely on a few bestsellers.
+- Repeat customers (74.8% of customers) generate 90.3% of revenue and spend about 3x more than one-time buyers.
+- 8.2% of orders are cancelled and 3.9% returned - about PHP 818K in lost sales.
+- Recommendations: invest in customer retention and reduce order cancellations.

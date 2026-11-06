@@ -1,0 +1,24 @@
+step,table,issue,action,rows_affected
+1,customers,Duplicate customer_id,"Kept first occurrence, dropped repeats (duplicate = same customer_id)",50
+2,customers,Inconsistent gender labels (M/F/Male/female...),Standardized to Male/Female/Unknown,2675
+3,customers,Null gender,"Filled with ""Unknown"" (kept customers so their orders are not lost)",298
+4,customers,Invalid negative age,Set to NaN (impossible value),48
+5,customers,Null age,"Left as NaN; age not used in revenue KPIs, so no values invented",197
+6,customers,Null loyalty_tier,"Filled with ""Unknown""",264
+7,customers,Invalid age of 0,Set to NaN (impossible value),1
+8,customers,"Mixed signup_date formats (3 formats, stored as text)",Parsed each format explicitly and combined into one datetime column,1281
+9,customers,Missing/malformed email; phone stored as number,Not used in Option A analysis; left unchanged and noted as a data limitation,223
+10,products,"Inconsistent category labels (18 variants: casing, spaces, typos, plurals)","Trimmed spaces, lowercased, mapped to 8 standard categories",137
+11,products,unit_price stored as text with ₱ currency sign,"Removed ₱ and commas, converted to numeric",68
+12,products,Null stock_qty,"Left as NaN; stock not used in sales KPIs, and 0 would wrongly mean out of stock",19
+13,orders,Duplicate order_id,"Kept first occurrence, dropped repeats (duplicate = same order_id)",75
+14,orders,Mixed order_datetime formats (3 formats incl. 12-hour AM/PM),Parsed each format explicitly and combined into one datetime column,3312
+15,orders,Null discount_pct,Filled with 0 (assume no discount applied),756
+16,orders,Null shipping_fee,Filled with median fee (85.88),470
+17,orders,"Orphan customer_id (all = placeholder CUST999999, not in customers)","Removed; cannot be linked to a customer/region, only 0.3% of orders",43
+18,order_items,Duplicate order_item_id,"Kept first occurrence, dropped repeats (duplicate = same order_item_id)",262
+19,order_items,"Orphan product_id (placeholder PROD00000, not in products)",Removed; no category/price can be linked,129
+20,order_items,Orphan order_id (order removed as duplicate/orphan),Removed so every item links to a valid order,111
+21,order_items,Invalid quantity = 0,Removed; a zero-quantity line is not a real sale,369
+22,order_items,unit_price_at_purchase stored as text with ₱,"Removed ₱ and commas, converted to numeric",2965
+23,order_items,Null unit_price_at_purchase,Backfilled with product list price from products table,2203
